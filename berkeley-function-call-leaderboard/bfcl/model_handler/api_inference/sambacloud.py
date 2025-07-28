@@ -23,9 +23,10 @@ class SambaCloudHandler(OpenAIHandler):
         while retry_count < max_retries:
             try:
                 api_response = self.client.chat.completions.create(**kwargs)
-                # If there's no error, break out of the loop
-                if not (hasattr(api_response, 'error') and api_response.error):
-                    break
+                # # If there's no error, break out of the loop
+                # if not (hasattr(api_response, 'error') and api_response.error):
+                #     break
+                break
             except Exception as e:
                 print(f"Error occurred: {str(e)}")
                 

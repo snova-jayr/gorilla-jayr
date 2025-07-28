@@ -113,6 +113,14 @@ class OpenAIHandler(BaseHandler):
         return inference_data
 
     def _parse_query_response_FC(self, api_response: any) -> dict:
+        if (hasattr(api_response, 'error') and api_response.error):
+            return  {
+            "model_responses": api_response.error['message'],
+            "model_responses_message_for_chat_history": "",
+            "tool_call_ids": [],
+            "input_token": 0,
+            "output_token": 0,
+        }
         try:
             model_responses = [
                 {func_call.function.name: func_call.function.arguments}

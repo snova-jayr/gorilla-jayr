@@ -142,4 +142,7 @@ SUPPORTED_MODELS = [
     "qwen/qwq-32b-FC-novita",
     "qwen/qwq-32b-novita",
     "DeepSeek-V3-0324-FC",
+    "Meta-Llama-3.3-70B-Instruct-FC",
+    "Meta-Llama-3.1-8B-Instruct-FC",
+    "Llama-4-Maverick-17B-128E-Instruct-FC",
 ]

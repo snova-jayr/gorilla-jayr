@@ -34,7 +34,7 @@ def get_args():
     parser.add_argument("--test-category", type=str, default="all", nargs="+")
 
     # Parameters for the model that you want to test.
-    parser.add_argument("--temperature", type=float, default=0.001)
+    parser.add_argument("--temperature", type=float, default=0.0)
     parser.add_argument("--include-input-log", action="store_true", default=False)
     parser.add_argument("--exclude-state-log", action="store_true", default=False)
     parser.add_argument("--num-threads", default=1, type=int)
