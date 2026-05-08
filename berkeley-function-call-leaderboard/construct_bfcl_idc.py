@@ -128,6 +128,7 @@ def build_requests(category: str, model: str, temperature: float):
             body = {"messages": messages}
             if tools:
                 body["tools"] = tools
+                body["tool_choice"] = "auto"
             body.update(
                 {
                     "temperature": temperature,
